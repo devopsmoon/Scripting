@@ -9,14 +9,15 @@ case $user_id in
   ;;
 esac
 status_check() {
-  case $? in
-  0)
-    echo -e "\e[1;32mSuccess....\e[0m"
-  *)
-    echo -e "\e[1;31mFailure....\e[0m"
-    exit 3
-     ;;
-    esac
+case $? in
+0)
+  echo -e "\e[1;32mSuccess....\e[0m"
+  ;;
+*)
+  echo -e "\e[1;31mFailure....\e[0m"
+  exit 3
+  ;;
+esac
 }
 print() {
   echo -e "\e[1;34m$1\e[0m"
