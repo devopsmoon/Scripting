@@ -35,7 +35,7 @@ print "generating password for user roboshop"
 echo "$sayeedmds" | passwd "$roboshop" --stdin
 status_check
 print "Giving sudo permission to roboshop user"
-echo 'roboshop ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+echo 'roboshop ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 print1 "finish"
 ;;
 update)
