@@ -26,7 +26,7 @@ print1() {
   echo -e "\e[1;33m$1\e[0m"
 }
 print2() {
-  echo -e "\e[1;31m$1\e[0m"
+  echo -e "\e[1;31mUsage: $0 ******update | frontend | catalogue | mongodb******\e[0m"
 }
 case $1 in
 update)
