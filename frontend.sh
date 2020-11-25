@@ -31,6 +31,7 @@ print2() {
 case $1 in
 update)
   print "Updating system"
+  yum update -y
   status_check
   print1 "Finish..."
   ;;
