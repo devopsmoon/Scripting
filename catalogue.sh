@@ -27,8 +27,20 @@ print2() {
   echo -e "\e[1;31mUsage: $0 ******update |frontend |catalogue | mongodb******\e[0m"
 }
 case $1 in
+Adding user)
+print "Creating the user"
+useradd -d /home/roboshop -m -s /bin/bash roboshop
+status_check
+print "generating password for user roboshop"
+echo "$sayeedmds" | passwd "$roboshop" --stdin
+status_check
+print "Giving sudo permission to roboshop user"
+echo 'roboshop ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+print1 "finish"
+;;
 update)
   print "updating system"
+  yum update -y
   status_check
   print1 "finish...."
   ;;
