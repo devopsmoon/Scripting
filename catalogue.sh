@@ -25,10 +25,10 @@ print1() {
   echo -e "\e[1;33m$1\e[0m"
 }
 print2() {
-  echo -e "\e[1;31mUsage: $0 ******Adding user |update |frontend |catalogue | mongodb******\e[0m"
+  echo -e "\e[1;31mUsage: $0 ******user |update |frontend |catalogue | mongodb******\e[0m"
 }
 case $1 in
-Adding user)
+user)
 print "Creating the user"
 useradd -d /home/roboshop -m -s /bin/bash roboshop
 status_check
